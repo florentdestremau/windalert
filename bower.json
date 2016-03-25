@@ -1,0 +1,23 @@
+{
+  "name": "windalert",
+  "description": "A weather website",
+  "main": "",
+  "authors": [
+    "Florent Destremau <florent.destremau@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^1.0.19"
+  }
+}

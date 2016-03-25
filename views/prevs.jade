@@ -1,0 +1,26 @@
+.spinner
+  .rect2
+  .rect3
+  .rect4
+  .rect5
+.row
+  table.table.table-striped.prevs
+    thead
+      tr
+        th Jour
+        th Heure
+        th Vent (nds)
+        th Rafales (nds)
+        th Direction
+        th Météo
+    tbody#prevs
+      tr(v-for="prev in prevs")
+        td {{prev.values_1[0]}} {{prev.values_1[1]}}
+        td {{prev.value_1}}
+        td {{(prev.value_3 / 1.852).toFixed(0)}}
+        td {{(prev.value_4 / 1.852).toFixed(0)}}
+        td
+          img(src="{{prev['image_2']}}", title="Direction : {{prev['image_2/_title']}}", alt="Direction : {{prev['image_2/_title']}}")
+        td
+          img(src="{{prev['image_3']}}", alt='Meteo')
+          span(v-if="prev['values_2] == '--'") {{prev['values_2']}}
